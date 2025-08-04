@@ -1,0 +1,7 @@
+git init
+git add .
+git commit -m "Initial DocuIntel"
+
+git branch -M main
+git remote add origin https://github.com/vaishnavidevi2508/docuintel
+git push -u origin m
