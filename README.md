@@ -1,103 +1,186 @@
-DOCULNET
-Because documents shouldn’t feel like mazes.
-The Problem
+<div align="center">
 
-You open a 40-page PDF.
-You press Ctrl + F.
-You search a keyword.
-You scroll.
-You search again.
-You still don’t find what you actually meant.
+# 🚀 DOCULNET  
 
-Documents store information.
-But they don’t understand you.
+### Transforming Static Documents into Intelligent Conversations  
 
-The Idea
+</div>
 
-What if your document could:
 
-Understand context
 
-Remember relationships
+---
 
-Respond intelligently
+## 🧠 The Problem  
 
-Speak back in natural language
+Searching inside long PDFs is frustrating.  
+Keyword matching fails to understand meaning.  
+Context is lost. Time is wasted.  
 
-That’s where Doculnet was born.
+Documents store information —  
+but they don’t understand you.
 
-What Doculnet Really Does
 
-Doculnet transforms static documents into interactive knowledge systems.
 
-Instead of searching for words, you ask questions.
-Instead of scanning pages, you get answers.
+---
 
-Behind the scenes:
+## 💡 The Vision  
 
-Text becomes semantic vectors
+Doculnet reimagines how we interact with documents.  
 
-Vectors become searchable meaning
+Instead of scrolling and searching,  
+you simply **ask**.  
 
-Meaning becomes intelligent responses
+Instead of matching words,  
+the system understands **intent**.  
 
-It doesn’t just match words.
-It understands intent.
+Doculnet turns static documents into dynamic knowledge systems.
 
-⚙️ The Technology Behind It
 
-Doculnet is built using a modern AI retrieval architecture:
 
-Python – Core development language
+---
 
-FastAPI – High-performance backend framework
+## ⚙️ Tech Stack  
 
-OpenAI GPT – Context-aware answer generation
+<div align="center">
 
-Pinecone – Vector database for semantic search
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)  
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge&logo=fastapi)  
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT-black?style=for-the-badge&logo=openai)  
+![Pinecone](https://img.shields.io/badge/Pinecone-VectorDB-purple?style=for-the-badge)  
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge&logo=postgresql)  
 
-PostgreSQL – Structured metadata storage
+</div>
 
-Uvicorn – ASGI server for deployment
 
-🧠 Architecture Flow
 
-Document ingestion & text extraction
+---
 
-Intelligent chunking
+## 🏗️ Architecture  
 
-Embedding generation
+1. 📄 Document ingestion  
+2. ✂ Intelligent text chunking  
+3. 🧬 Embedding generation  
+4. 🗄 Vector storage (Pinecone)  
+5. 🔎 Semantic retrieval  
+6. 🤖 LLM-powered answer generation  
 
-Vector storage in Pinecone
+Built using Retrieval-Augmented Generation (RAG).
 
-Semantic retrieval
 
-LLM-powered response generation
 
-This combination enables Retrieval-Augmented Generation (RAG).
+---
 
-Why I Built This
+## ✨ Key Highlights  
 
-As an AI & Data Science student, I wanted to build something that:
+- 🔍 Context-aware semantic search  
+- 🤖 LLM-driven response generation  
+- ⚡ FastAPI-based backend architecture  
+- 🧩 Modular and scalable design  
+- 🚀 Ready for production scaling  
 
-Uses LLMs beyond chatbots
 
-Solves a real-world frustration
 
-Demonstrates semantic search architecture
+---
 
-Connects AI theory to practical systems
+## 🎯 Use Cases  
 
-Doculnet is that bridge.
+- Insurance Policy Q&A  
+- Legal Document Assistance  
+- Enterprise Knowledge Retrieval  
+- Academic Research Support  
+---
 
-The Bigger Vision
+## 🏗️ System Architecture  
 
-Today: Document Q&A.
-Tomorrow: Enterprise knowledge assistant.
-Future: AI systems that truly understand information ecosystems.
+```
+          User Query
+               │
+               ▼
+        FastAPI Backend
+               │
+               ▼
+      Text Chunk Retrieval
+               │
+               ▼
+        Pinecone Vector DB
+               │
+               ▼
+   Relevant Context Retrieved
+               │
+               ▼
+        OpenAI GPT Model
+               │
+               ▼
+          Final Answer
+```
 
-Built With Curiosity By
+Doculnet follows a Retrieval-Augmented Generation (RAG) pipeline,  
+where semantic retrieval enhances LLM-based response generation.
 
-Vaishnavi Devi R
-AI & Data Science Student
-Building intelligent systems that make information accessible and meaningful
+
+
+---
+
+## 🚀 API Usage  
+
+### 🔹 Start the Server
+
+```bash
+uvicorn app:app --reload
+```
+
+Server runs at:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+### 🔹 Example Query (POST Request)
+
+```bash
+curl -X POST "http://127.0.0.1:8000/query" \
+-H "Content-Type: application/json" \
+-d '{"question": "What are the policy coverage details?"}'
+```
+
+---
+
+### 🔹 Example JSON Request
+
+```json
+{
+  "question": "Explain the claim process in this document."
+}
+```
+
+---
+
+### 🔹 Example JSON Response
+
+```json
+{
+  "answer": "The claim process involves submitting required documents, verification by the insurer, and final approval based on policy terms."
+}
+```
+
+---
+
+## 🔐 Environment Variables  
+
+Create a `.env` file in the root directory:
+
+```
+OPENAI_API_KEY=your_openai_key
+PINECONE_API_KEY=your_pinecone_key
+DATABASE_URL=your_postgres_url
+```
+
+---
+👩‍💻 Built By  
+
+**Vaishnavi Devi R**  
+AI & Data Science Student  
+Passionate about building intelligent AI systems that solve real-world problems.  
+
